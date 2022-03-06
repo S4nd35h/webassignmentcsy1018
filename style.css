@@ -1,83 +1,182 @@
 *{
-	padding:0px;
-	margin: 0px;
-	font-family: serif, sans;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:'helvetica', helvetica;
+}
+body{
+    background-color:#C7CEEA;
+}
+.text-intro{
+    margin-left:145px;
+    margin:205px;
+    font-size:27px;
+    color: #ff8000;
+}
 
-}
-.header{
-	min-height:100vh;
-	width: 100%;
-	background: linear-gradient(rgba(5,10,28,0.7),rgba(5,10,28,0.7));
-	background-position: center;
-	background-size: cover;
-	
-}
- 
+/* navigation bar */
 nav{
-	display: flex;
-	padding: 2% 6%;
-	justify-content: space-between;
-	align-items: center;
+    width: 100%;
+    height: 78px;
+    background-color: #ffb347;
+    line-height: 74px;
+    padding: 0px 81px;
 }
-nav-links{
-	flex: 1;
-	text-align: left;
+nav .menu{
+    float: right;
 }
-.nav-links ul li {
-	list-style:  none;
-	display: inline-block;
-	padding: 8px 12px;
-	position:  relative;
+nav .menu p{
+    font-size:38px;
+    font-weight: bold;
+    color: #85A1F2;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
 }
-.nav-links ul li a {
-	color: lightgoldenrodyellow;
-	text-decoration: none;
-	font-size: 13px;
+nav ul{
+    float:left;
 }
-.nav-links ul li::after{
-	content: '';
-	width: 0%;
-	height: 2px;
-	background: #C4fAF8;
-	display: block;
-	margin: auto;
-	transition: 1s;
+nav ul li{
+    list-style: none;
+    display: inline-block;
 }
-.nav-links ul li:hover::after{
-	width: 100%;
+nav ul li a{
+    text-decoration: none;
+    color:#85A1F2;
+    font-size: 20px;
+    text-transform: 0px 22px;
+    padding:0px 20px;
 }
-.intro-text{
-	width: 90%;
-	color: orange;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	text-align: center;
+nav ul li a:hover{
+    color: #30303b;
+}
+nav ul .active{
+    color:#85A1F2;
+}
 
+/* navigation bar end*/
+
+/*hamburger*/
+.check-btn{
+    color:white;
+    font-size: 22px;
+    cursor: pointer;
+    float: left;
+    display:none;
+}
+#check{
+    display:none;
+}
+/* hamburger end */
+/* responsive */
+@media screen and (max-width:840px){
+    nav{
+        padding:0px 20px;
+    }
+    .check-btn{
+        display: block;
+    }
+    nav .menu p{
+        font-size: 27px;
+    }
+    nav ul{
+        width: 100%;
+        height: 100vh;
+        position:fixed;
+        top:74px;
+        left:-100%;
+        text-align:center;
+        transition: 1s linear;
+        background-color: orange;
+    }
+    nav ul li{
+        display: block;
+        margin: 48px 0px;
+        line-height: 29px;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    h1{
+    margin: 2em;
+    }
+.port-head{
+    margin-top: -30px;
+    background-color:none;
+    color:black;
+    width: 100%;
+    height: 100%;
+    }
+.container{
+    display:flex;
+    flex-direction:row;
+    }
+.picture1{
+    width:50%;
+    background-color:gray;
+    height: 400px;
+    }
+.picture2{
+    width:50%;
+    background-color:gray;
+    height:400px;
+    }
+
+}
+/* responsive end */
 } 
-.intro-text h1{
-	font-size:70px;
+/*--------------CONTACT-----------------*/
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid ##52F954;
+  border-radius: 4px;
+  resize: vertical;
 }
-.intro-text p{
-	margin: 10px 0 30px;
-	font-size: 15px;
-	color: lightgoldenrodyellow;
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
-@media(max-width: 700px){
-	.intro-text h1{
-		font-size: 20px;
-	}
-	.nav-links ul li{
-		display: block;
-	}
-	.nav-links{
-		position: fixed;
-		background: darkorange;
-		height: 7511px;
-		width: 210px;
-		right: 0;
-		top: 0;
-		text-align: right;
-		z-index: 2;
-	}
+/* submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+/* hover animation on submit*/
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 4px;
+  background-color:gray;
+  padding: 18px;
+}
+
+.col-name {
+  float: left;
+  width: 25%;
+  margin-top: 4px;
+}
+
+.col-cred {
+  float: left;
+  width: 75%;
+  margin-top: 4px;
+}
+
+/* float gets cleared*/
+.form-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 800px) {
+  .col-name, .col-cred, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
