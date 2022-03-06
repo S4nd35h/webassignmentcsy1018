@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
-
-    <!-------------Navigation bar---------------------->
   <nav>
    <input type="checkbox" id="check">
    <label for="check" class="check-btn">
@@ -21,25 +19,23 @@
 
   </div>
   <ul>
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="index.html" >Home</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html"class="active">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="sitereport.html">SiteReport</a></li>
   </ul>
   </nav>
-    <!-------------Navigation bar---------------------->
-    <h1 class="text-heading"> welcome to my contact form </h1>
+      <h1 class="text-heading"> welcome to my contact form </h1>
   <h2 class="text-body"> This is my form if you have any  issues feel free to contact me.  </h2>
-<!----------Form----------->
-  <section class="container">
-    <form action="mailto:pokhreld134@gmail.com" method="POST"enctype="multipart/form-data"name="email">
+  <div class="container">
+    <form action="mailto:pokhreld134@gmail.com" method="POST" enctype="multipart/form-data" name="email">
       <div class="form-row">
         <div class="col-name">
           <label for ="firstname"> First Name</label>
         </div>
         <div class="col-cred">
-          <input type="test" name="firstname" id="firstname" placeholder="Your name here...">
+          <input type="text" name="firstname" id="firstname" placeholder="Your name here...">
         </div>
       </div>
       <div class="form-row">
@@ -47,19 +43,20 @@
            <label for ="lastname"> Last Name</label>
         </div>
         <div class="col-cred">
-          <input type="test" name="Lastname" id="Lastname" placeholder="Your last name here...">
+          <input type="text" name="Lastname" id="lastname" placeholder="Your last name here...">
         </div>
       </div>
       <div class="form-row">
         <div class="col-name">
           <label for ="email">Email</label>
         </div>
+      </div>
         <div class="col-cred">
           <input type="text" name="email" id="email" placeholder="123@gmail.com">
       </div>
       <div class="form-row">
         <div class="col-name">
-          <label for="subject" name="subject">Subject</label>
+          <label for="subject">Subject</label>
         </div>
         <div class="col-cred">
         <textarea id="subject" name="subject" placeholder="write your subject here"></textarea>
@@ -69,7 +66,6 @@
       <input type="submit" value="submit">
       </div>
     </form>
-  </section>
-  <!--------------------form------------------------------>
-</body>
+  </div>
+  </body>
 </html>
